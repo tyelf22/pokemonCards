@@ -22,7 +22,9 @@ pokemon.forEach(poke => {
     pokeContainer.appendChild(card) 
     card.addEventListener( 'click', function() {
         card.classList.toggle('is-flipped');
-        backDiv.textContent = poke.cname;
-        //console.log(poke.ename)
       });
+    
+      //backDiv.addEventListener( 'click', function() {
+          //backDiv.addEventListener('isflipped');
+      //});
 });
