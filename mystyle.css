@@ -114,3 +114,11 @@ figcaption {
     font-family: pokemonFont;
 }
 
+@media only screen and (max-width: 1400px){
+    .statsContainer{
+        font-size: 10px;
+    }
+   
+}
+
+
