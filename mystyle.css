@@ -106,9 +106,8 @@ figcaption {
 
 .statsContainer {
     position: absolute;
-    margin: 0 auto;
     width: 80%;
-    margin: 40px;
+    margin: 10%;
     text-align: center;
     color: #3B4CCA;
     font-size: 115%;
