@@ -110,12 +110,7 @@ figcaption {
     margin: 10%;
     text-align: center;
     color: #3B4CCA;
-    font-size: 1.4rem;
+    font-size: 2.5vw;
     font-family: pokemonFont;
 }
 
-@media screen and (max-width: 1900px) {
-    .statsContainer{
-        font-size: 1rem;
-    }
-}
