@@ -40,6 +40,7 @@ img {
     margin-right: auto;
     display: block;
     width: 70%;
+    height: 800px;
 }
 
 .pokeball {
@@ -118,7 +119,6 @@ figcaption {
 }
 
 .newCard {
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     position: relative;
