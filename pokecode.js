@@ -41,7 +41,7 @@ pokemon.forEach(poke => {
     //created stats container
     let statsContainer = document.createElement('div')
     statsContainer.className = "statsContainer"
-    card.appendChild(statsContainer)
+    //card.appendChild(statsContainer)
     cardBack.appendChild(statsContainer)
 
     //adding each stat
@@ -69,5 +69,27 @@ pokemon.forEach(poke => {
     speed.textContent = `Speed: ${poke.base.Speed}`
     statsContainer.appendChild(speed)
 
-    
 })
+
+
+let newCard = document.createElement('div')
+newCard.className = "newCard"
+let newCardBTN = document.createElement('div')
+newCardBTN.className = "newCardBTN"
+let newCardImg = document.createElement('img')
+newCardImg.className = "newCardImg"
+newCard.appendChild(newCardImg)
+newCardImg.src = "img/img/PokemonLogo.png"
+
+newCard.appendChild(newCardBTN)
+
+newCardBTN.textContent = "Press For New"
+
+pokeContainer.appendChild(newCard)
+
+//event lister to create to pokemon
+newCardImg.addEventListener('click', function() {
+    
+
+})
+
