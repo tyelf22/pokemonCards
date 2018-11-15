@@ -41,6 +41,7 @@ pokemon.forEach(poke => {
     //created stats container
     let statsContainer = document.createElement('div')
     statsContainer.className = "statsContainer"
+    card.appendChild(statsContainer)
     cardBack.appendChild(statsContainer)
 
     //adding each stat
