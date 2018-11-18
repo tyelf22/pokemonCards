@@ -1,10 +1,10 @@
-import { pokemon } from './pokemon.js'
+import { pokemon } from './pokemon.js' //import javascript object
 
 console.log(pokemon)
 
-const pokeContainer = document.querySelector('#container')
+const pokeContainer = document.querySelector('#container') //container to append front and back of card 
 
-
+//forEach loop to create card
 pokemon.forEach(poke => {
     let card = document.createElement('div')
     card.className = "card"
@@ -12,19 +12,19 @@ pokemon.forEach(poke => {
         card.classList.toggle('is-flipped');
     })
 
-    let cardFront = document.createElement('figure')
+    let cardFront = document.createElement('figure')  //figure for cardFront
     cardFront.className = "cardFaceFront"
 
-    let cap = document.createElement('figcaption')
+    let cap = document.createElement('figcaption') //figcapt for front of card
     let img = document.createElement('img')
 
-    img.src = `img/img/${poke.id}${poke.ename}.png`
+    img.src = `img/img/${poke.id}${poke.ename}.png` //formatting file name
     cap.textContent = poke.ename
     cardFront.appendChild(img)
     cardFront.appendChild(cap)
     
 
-    let cardBack = document.createElement('figure')
+    let cardBack = document.createElement('figure') //created card back figure
     cardBack.className = "cardFaceBack"
     let capt = document.createElement('figcaption')
     let backimg = document.createElement('img')
@@ -73,7 +73,7 @@ pokemon.forEach(poke => {
 })
 
 
-
+//new card for creating new  poke card
 let newCard = document.createElement('div')
 newCard.className = "newCard"
 let newCardBTN = document.createElement('div')
@@ -113,7 +113,7 @@ newCardImg.addEventListener('click', function() {
         card.classList.toggle('is-flipped');
     })
 
-    let cardFront = document.createElement('figure')
+    let cardFront = document.createElement('figure') //copied code from about (reformat?)
     cardFront.className = "cardFaceFront"
 
     let cap = document.createElement('figcaption')
