@@ -1,6 +1,6 @@
-export const pokemon = [
-    {
-        "base": {
+export const pokemon = [ //use of export statements  //using arrays to store and manipulate collections of data
+    {                          
+        "base": {                       //use of objects with key value pairs
             "Attack": 49, 
             "Defense": 49, 
             "HP": 45, 

@@ -1,16 +1,17 @@
-import { pokemon } from './pokemon.js' //import javascript object
+import { pokemon } from './pokemon.js' //use of import statements
 
-console.log(pokemon)
 
 const pokeContainer = document.querySelector('#container') //container to append front and back of card 
 
 //forEach loop to create card
-pokemon.forEach(poke => {
+pokemon.forEach(poke => {  //iteration through an array using loops and Array Methods
     let card = document.createElement('div')
     card.className = "card"
-    card.addEventListener('click', function(){
+    card.addEventListener('click', () => {
         card.classList.toggle('is-flipped');
     })
+
+ /* ---------------FRONT OF CARD-------------------- */  //use of variables with proper scope 
 
     let cardFront = document.createElement('figure')  //figure for cardFront
     cardFront.className = "cardFaceFront"
@@ -23,6 +24,7 @@ pokemon.forEach(poke => {
     cardFront.appendChild(img)
     cardFront.appendChild(cap)
     
+    /* ----------------BACK OF CARD --------------------*/
 
     let cardBack = document.createElement('figure') //created card back figure
     cardBack.className = "cardFaceBack"
@@ -38,7 +40,7 @@ pokemon.forEach(poke => {
     card.appendChild(cardFront)
     card.appendChild(cardBack)
     
-    
+    /*  -------------------STATS CONTAINER---------------------  */
     //created stats container
     let statsContainer = document.createElement('div')
     statsContainer.className = "statsContainer"
@@ -47,11 +49,11 @@ pokemon.forEach(poke => {
 
     //adding each stat
     let attack = document.createElement('p')
-    attack.textContent = `Attack: ${poke.base.Attack}`
+    attack.textContent = `Attack: ${poke.base.Attack}`  // proper use of strings using template literals
     statsContainer.appendChild(attack)
 
     let defense = document.createElement('p')
-    defense.textContent = `Defense: ${poke.base.Defense}`
+    defense.textContent = `Defense: ${poke.base.Defense}`  //objects with properties and methods accessed using dot notation
     statsContainer.appendChild(defense)
 
     let hp = document.createElement('p')
@@ -59,11 +61,11 @@ pokemon.forEach(poke => {
     statsContainer.appendChild(hp)
 
     let specialAttack = document.createElement('p')
-    specialAttack.textContent = 'Sp. Attack: '+ poke.base["Sp.Atk"]
+    specialAttack.textContent = 'Sp. Attack: '+ poke.base["Sp.Atk"] //use of Arrays
     statsContainer.appendChild(specialAttack)
 
     let specialDefense = document.createElement('p')
-    specialDefense.textContent = "Sp. Defense: "+ poke.base["Sp.Def"]
+    specialDefense.textContent = "Sp. Defense: "+ poke.base["Sp.Def"]  //proper use of string manipulation
     statsContainer.appendChild(specialDefense)
 
     let speed = document.createElement('p')
@@ -89,9 +91,10 @@ newCardBTN.textContent = "Press For New"
 
 pokeContainer.appendChild(newCard)
 
-// bulbasaur creator
-let Bulbasaur = {
-    "base": {
+
+// bulbasaur creator        //proper declarations of objects
+let Bulbasaur = {           //use of Objects with key value pairs
+    "base": {      //custom javascript objects
         "Attack": 49, 
         "Defense": 49, 
         "HP": 45, 
@@ -173,3 +176,15 @@ newCardImg.addEventListener('click', function() {
 
 })
 
+
+// class myNewPokemon {                                //objects using constructors properly (not complete)
+//     constructor (ename, id, attack, defense, hp){
+//         this.ename = ename,
+//         this.id = id,
+//         this.attack = attack
+//         this.defense = defense,
+//         this.hp = hp
+//     }
+// }
+
+// let myNewPokemon = new myNewPokemon ("Bulbasaur", 001, 49, 49, 45);
